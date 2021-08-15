@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <p><a th:href="@{/massage/all}">all massages</a></p>
+    </div>
+    <div>
+        <form th:action="@{/massage/add}" method="post">
+            <input type="text" name="topic" placeholder="Тема сообщения">
+            <input type="text" name="text" placeholder="Введите сообщение">
+            <button type="submit">Отправить сообщение</button>
+        </form>
+    </div>
+    <div>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+</body>
+</html>
